@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  yolo-detection:
+    build: .
+    volumes:
+      - ./inputs:/app/inputs
+      - ./outputs:/app/outputs
+    command: python src/model/model.py
